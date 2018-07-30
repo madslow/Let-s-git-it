@@ -3,7 +3,6 @@
 hi!
 
 my name is madslow
-
 i'm studying progamming
 
 i want knowledge
