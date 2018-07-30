@@ -1,0 +1,53 @@
+table {
+  width: 100%;
+  padding: 20px;
+  border-spacing: none;
+  th,
+  td {
+    padding: 5px;
+    background: #eee;
+  }
+  th {
+    background: #000;
+    color: #fff;
+  }
+}
+
+// starting here
+@mixin borders-radius ($radius...) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+%indicator{
+  text-indent: -9999px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+  margin-right: 10px;
+  @include borders-radius(10em);
+  content: attr(data-status);
+}
+
+@mixin status-indicator($bg: #f00) {
+  @extend %indicator;
+  background: $bg;
+}
+
+i[data-status="done"]:before {
+  @include status-indicator(lightgreen);
+}
+
+i[data-status="in_progress"]:before {
+  @include status-indicator(orange);
+}
+
+i[data-status="idle"]:before {
+  @include status-indicator(yellow);
+}
+
+i:before{
+  @include status-indicator();
+}

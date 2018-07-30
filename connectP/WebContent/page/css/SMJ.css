@@ -1,0 +1,179 @@
+@CHARSET "EUC-KR";
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+.wrapper{
+  width: 500px;
+  height: 80px;
+  margin: 100px auto 0;
+  border-radius: 10px;
+  padding: .7%;
+          
+  background-image: -webkit-linear-gradient(top, #161616 0%, #1F1F1F 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#161616), to(#1F1F1F));
+}
+
+.button{
+    height: 100%;
+    color: #818181;
+    background-image: linear-gradient(top, #383838 0%, #1F1F1F 5%, #161616 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1F1F1F), to(#161616));
+    border-radius: 7px;
+    float: left;
+    box-shadow: 0 0 1px 1px rgb(10,10,10);
+    cursor: pointer;
+    position: relative;
+    font: normal 20px arial;
+    text-transform: uppercase;
+    padding-left: 4%;
+    padding-top: 5%;
+    vertical-align: bottom;
+    transition: color .3s ease;
+}
+
+.button:hover{
+    color: #9E9E9E;
+}
+
+.button:active{
+    box-shadow: 0 0 1px 1px rgb(10,10,10),
+                    inset 0 2px 2px 0px black;
+}
+
+.button:before{
+    position: absolute;
+    content: '';
+    right: 15px;
+    top: 10px;
+
+    width: 12px;
+    height: 12px;
+    background: #646464;
+    background-image: radial-gradient(top, #616161 0%, #616161 20%, #535353 60%);
+    border-radius: 50%;
+    box-shadow: 0 0 4px #1C1C17;
+    transition: all .3s ease;
+}
+
+.button:hover:before{
+    background: #FF4F4F;
+    box-shadow: 0 0 4px #1C1C17,
+                        0 0 5px #FF4242;
+}
+
+.button:active:before{
+    box-shadow: 0 0 4px #1C1C17,
+                        inset 0 2px 2px 0px #CC0000;
+}
+
+.button:nth-child(1){
+    width: 40%;
+    margin-right: 2%;
+}
+
+.button:nth-child(2){
+    width: 58%;
+}
+
+
+.database {
+position: relative;
+display: inline-block;
+margin: 10px;
+}
+
+.database .fa-database {
+font-size: 30px;
+}
+
+.database .fa-circle {
+position: absolute;
+bottom: 0;
+right: 0;
+margin: -3px -6px;
+}
+
+.status {
+display: inline-block;
+}
+
+/* balls.html */
+
+html {
+    font: 12px/1.2em sans-serif;
+}
+ul {
+  list-style: none;
+}
+li {
+  margin-left: 5px;
+}
+div.column {
+  display: table-cell;
+}
+.ball {
+  position: relative;
+  height: 5px;
+  width: 10px;
+  margin-right: 3px;
+}
+.bachi {
+  display:inline-block;
+  height: 6px;
+  width: 6px;
+  margin-right: 3px;
+  border-style: solid;
+  border-radius: 50%;
+  border-width: 2px;
+}
+.boch {
+  display:inline-block;
+  height: 10px;
+  width: 10px;
+  margin-right: 3px;
+  border-radius: 50%;
+}
+.bloch {
+  display:inline-block;
+  height: 10px;
+  width: 5px;
+}
+.topball {
+  height: 5px;
+  border-radius: 90px 90px 0 0;
+}
+.botball {
+  height: 5px;
+  border-radius: 0 0 90px 90px;
+}
+.rightball {
+  width: 5px;
+  border-radius: 0 90px 90px 0;
+}
+.leftball {
+  margin-right: 0;
+  width: 5px;
+  border-radius: 90px 0 0 90px;
+}
+.good {background: green;}
+.problem {background: gold;}
+.bad {background: red;}
+.good-data {border-color: green;}
+.problem-data {border-color: gold;}
+.bad-data {border-color: red;}
+
+table { border-collapse: collapse; }
+
+table,
+th,
+td{
+	border: 2px solid black;
+}
+
+col-sm-12 {
+	 margin-left: auto; margin-right: auto;
+}
